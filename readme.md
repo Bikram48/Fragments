@@ -12,7 +12,7 @@ Fragments
 <img height="700" width="50%" src="screenshots/screenshot3.png">
 
 #### Since fragment can retain an instance of its data, rotating a device will not affects the data inside the fragment.
-<img height="700" width="50%" src="screenshots/screenshot4.png">
+<img width="100%" src="screenshots/screenshot4.png">
 
 #### App video Demonstration
 ![](./video.gif)
