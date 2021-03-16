@@ -1,4 +1,4 @@
-package com.project.fragmentexample1;
+package com.project.fragmentexample2;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isFragmentDisplayed) {
-                    displayFragment();
+                    sdisplayFragment();
                 } else {
                     closeFragment();
                 }
