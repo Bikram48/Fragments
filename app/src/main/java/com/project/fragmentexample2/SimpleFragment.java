@@ -1,9 +1,13 @@
 package com.project.fragmentexample2;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,15 +19,20 @@ import android.widget.Toast;
 public class SimpleFragment extends Fragment {
     private static final int YES = 0;
     private static final int NO = 1;
-
+    Context context;
     public SimpleFragment() {
         // Required empty public constructor
     }
 
     @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        context=container.getContext();
         final View rootView =
                 inflater.inflate(R.layout.fragment_simple, container, false);
         final RadioGroup radioGroup = rootView.findViewById(R.id.radio_group);
@@ -52,7 +61,8 @@ public class SimpleFragment extends Fragment {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
                 final int numStars = ratingBar.getNumStars();
-                Toast.makeText(getContext(), "My Rating: "+rating+"/"+numStars, Toast.LENGTH_LONG).show();
+                Toast.makeText(context, "My Rating: "+rating+"/"+numStars, Toast.LENGTH_SHORT).show();
+                Log.d("TAG", numStars+"");
             }
         });
         return rootView;

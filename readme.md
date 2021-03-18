@@ -1,15 +1,11 @@
 Fragments
 ======================
-## Task2
+## Homework
 ========================
 
-#### Adding and removing the fragment by clicking the button using FragmentManager and FragmentTransaction class.
+#### Next and previous buttons are added into the app where next button will be used to go to the secondactivity layout and previous button on secondactivity will return the user back to the mainactivity.
 #### App video Demonstration
-![](./video.gif)
+![](./homework.gif)
 
-#### Screenshots
-<img height="700" width="50%" src="screenshots/screenshot6.png">
-
-<img height="700" width="50%" src="screenshots/screenshot7.png">
 
 ===========================================================================
